@@ -12,6 +12,7 @@ mv ./kubectl /usr/local/bin/
 curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3
 chmod +x get_helm.sh
 ./get_helm.sh
+rm ./get_helm.sh
 
 
 # install AWS Authenticator
@@ -23,6 +24,8 @@ mv ./aws-iam-authenticator /usr/local/bin
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 ./aws/install
+rm ./awscliv2.zip
+rm -rf ./aws
 
 # install terraform
 
