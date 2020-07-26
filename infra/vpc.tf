@@ -1,3 +1,6 @@
+# Based on AWS EKS VPC considarations
+# https://docs.aws.amazon.com/eks/latest/userguide/network_reqs.html
+
 variable "region" {
   default     = "us-east-1"
   description = "AWS region"
