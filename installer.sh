@@ -23,3 +23,8 @@ mv ./aws-iam-authenticator /usr/local/bin
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip awscliv2.zip
 ./aws/install
+
+# install terraform
+
+curl https://releases.hashicorp.com/terraform/0.12.29/terraform_0.12.29_linux_amd64.zip -o terraform.zip
+unzip ./terraform.zip && mv terraform /usr/bin && rm terraform.zip
