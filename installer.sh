@@ -1,6 +1,15 @@
 #!/bin/bash
 
-set -ex
+# This installer is used to install all the dependencies for deployment of K8 on AWS
+# Terraform will be used to deploy EKS on AWS
+# dependencies to be installed:
+#  - kubectl + kubectl auto completion
+#  - HELM
+#  - AWS Authenticator
+#  - Terraform 0.12
+#  - AWS CLI V2
+
+set -x
 yum update -y && yum install -y  unzip curl wget
 
 # install Kubectl
