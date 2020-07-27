@@ -46,21 +46,22 @@ Terraform has been successfully initialized!
 Then, provision your EKS cluster by running terraform apply. (may take upto 15 minutes)
 
 ```bash
-cd infra
-terraform apply 
+$ cd infra
+$ terraform apply 
 ```
 
 After successful apply of the Terraform you can view the outputs by running the following command. 
 
 ```bash
-cd infra
-terraform output
+$ cd infra
+$ terraform output
 ```
 
 ## Configure kubectl 
 
 If you did not use installer.sh, make sure you have installed AWS Authenticator before configuring your kubectl.
 you can get both region and cluster name from the output of terraform output command. 
+The kube config file should be already generated for you after a successful terraform apply. 
 
 
 ```shell
