@@ -1,7 +1,13 @@
 # Kubernetes Cluster deployment using EKS
 
-This repo provides a terraform to deploy a VPC and setup Kubernetes using EKS module.
+This repo provides a Terraform to create an Elastic Kubernetes (EKS) cluster and associated worker nodes on AWS.
 
+This deployment will create a VPC, security groups used by the EKS cluster, subnets (public and private) using the AWS VPC Module.
+
+
+Based on the [AWS recommendation](https://docs.aws.amazon.com/eks/latest/userguide/create-public-private-vpc.html) for all production grade deployments, this deployment will create both private and public subnets in multiple availability zones to allows the deployment of nodes into private subnets and allows Kubernetes to deploy load balancers to the public subnets that can load balance traffic to pods running on nodes in the private subnets.
+
+### Installer
 The installer.sh will install all the dependency for you
 
 Note: Assumption is that you are using centOS and you need to install the following dependencies manually if you want to run it on your Mac/Windows. 
